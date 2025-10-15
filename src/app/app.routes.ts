@@ -33,7 +33,6 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'about',
-    pathMatch: 'full',
+    loadComponent: () => import('./pages/about-page/about-page.component'),
   },
 ];
