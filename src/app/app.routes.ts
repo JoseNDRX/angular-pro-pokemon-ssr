@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-
   {
     path: 'pokemons',
-    loadComponent: () => import('./pages/pokemons-page/pokemons-page.component'),
+    loadComponent: () =>
+      import('./pages/pokemons-page/pokemons-page.component'),
   },
   {
     path: 'pokemons/:id',
@@ -30,6 +30,10 @@ export const routes: Routes = [
     redirectTo: () => {
       return 'about';
     },
-  }
-
+  },
+  {
+    path: '',
+    redirectTo: 'about',
+    pathMatch: 'full',
+  },
 ];
